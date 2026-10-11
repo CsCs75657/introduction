@@ -1,0 +1,518 @@
+/* Right-hand profile column */
+
+#banner .profile-column {
+    flex: 0 0 160px;
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Profile photo */
+
+#banner .profile-photo {
+    width: 160px;
+    height: 190px;
+    min-height: 0;
+    margin: 0;
+}
+
+#banner .profile-photo img {
+    width: 160px;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* University logos underneath portrait */
+
+#banner .institution-logos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1.25rem;
+}
+
+#banner .institution-logos img {
+    max-height: 45px;
+    max-width: 90px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+@media screen and (max-width: 736px) {
+
+    #banner {
+        flex-direction: column;
+    }
+
+    #banner .content {
+        order: 1;
+        width: 100%;
+    }
+
+    #banner .profile-column {
+        order: 2;
+        width: 160px;
+        max-width: 160px;
+        flex: none;
+        margin: 1.5em auto 0 auto;
+    }
+
+    #banner .profile-photo {
+        width: 160px;
+        height: 190px;
+        min-height: 0;
+        margin: 0;
+    }
+
+    #banner .profile-photo img {
+        width: 160px;
+        height: 190px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #banner .institution-logos {
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    #banner .institution-logos img {
+        max-height: 45px;
+        max-width: 90px;
+    }
+}
+
+/* =========================================
+   PUBLICATION - RESEARCH OVERVIEW
+   ========================================= */
+
+
+/* Force the original Features section into 3 equal columns */
+
+.features.research-overview-features {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+
+    width: 100% !important;
+    margin: 2rem 0 2rem 0 !important;
+    gap: 3rem !important;
+}
+
+
+/* Each individual column */
+
+.features.research-overview-features article {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    margin: 0 !important;
+
+    text-align: center;
+}
+
+
+/* Remove original alternating margins */
+
+.features.research-overview-features article:nth-child(2n - 1),
+.features.research-overview-features article:nth-child(2n) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* Diamond icon */
+
+.features.research-overview-features article .icon {
+    flex: none !important;
+
+    width: 8em !important;
+    height: 8em !important;
+    line-height: 8em !important;
+
+    margin: 0 0 2rem 0 !important;
+}
+
+
+/* Size of symbol inside diamond */
+
+.features.research-overview-features article .icon:before {
+    font-size: 2.25rem;
+}
+
+
+/* Size of diamond outline */
+
+.features.research-overview-features article .icon:after {
+    width: 6em !important;
+    height: 6em !important;
+
+    margin: -3em 0 0 -3em !important;
+}
+
+
+/* Content underneath icon */
+
+.features.research-overview-features article .content {
+    width: 100% !important;
+    flex: none !important;
+}
+
+
+/* Heading */
+
+.features.research-overview-features article .content h3 {
+    margin: 0 0 1rem 0;
+    text-align: center;
+}
+
+
+/* Paragraph */
+
+.features.research-overview-features article .content p {
+    margin: 0;
+    text-align: left;
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 980px) {
+
+    .features.research-overview-features {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+}
+
+
+/* Phone */
+
+@media screen and (max-width: 736px) {
+
+    .features.research-overview-features {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+
+}
+
+/* =========================================
+   PROFESSIONAL EXPERIENCE TIMELINE
+   ========================================= */
+
+.experience-timeline {
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+
+/* Timeline vertical line */
+
+.experience-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 175px;
+
+    width: 2px;
+    background: rgba(210, 215, 217, 0.75);
+}
+
+
+/* Individual experience */
+
+.timeline-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 145px 60px minmax(0, 1fr);
+
+    margin-bottom: 3.5rem;
+}
+
+
+/* Date */
+
+.timeline-date {
+    text-align: right;
+    padding-top: 0.2rem;
+}
+
+.timeline-date span {
+    font-weight: 700;
+    color: #7f888f;
+}
+
+
+/* Timeline dot */
+
+.timeline-marker {
+    position: relative;
+}
+
+.timeline-marker::before {
+    content: "";
+
+    position: absolute;
+    top: 0.35rem;
+    left: 25px;
+
+    width: 14px;
+    height: 14px;
+
+    background: #f56a6a;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 2px #f56a6a;
+
+    z-index: 1;
+}
+
+
+/* Experience content */
+
+.timeline-content {
+    padding: 0 0 0.5rem 0;
+}
+
+.timeline-content h3 {
+    margin: 0 0 0.4rem 0;
+}
+
+.timeline-content h4 {
+    margin: 0 0 0.4rem 0;
+    color: #7f888f;
+    font-weight: 600;
+}
+
+.timeline-location {
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: #9fa3a6;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+    .experience-timeline::before {
+        left: 7px;
+    }
+
+    .timeline-item {
+        display: block;
+        padding-left: 40px;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-date {
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-marker {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .timeline-marker::before {
+        left: 0;
+    }
+
+}
+
+/* =========================================
+   ABSTRACT BOX
+   ========================================= */
+
+.abstract-box {
+    border-left: solid 6px #f56a6a;
+    background: #fffaf9;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.abstract-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   PUBLICATION CARDS - UNIFORM IMAGE SIZE
+   ========================================= */
+
+#publications .posts article .image {
+    width: 100%;
+    height: 260px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    background: #ffffff;
+}
+
+
+/* Keep entire image visible */
+
+#publications .posts article .image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* Keep publication titles aligned */
+
+#publications .posts article h3 {
+    min-height: 5.5rem;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 736px) {
+
+    #publications .posts article .image {
+        height: 220px;
+    }
+
+    #publications .posts article h3 {
+        min-height: 0;
+    }
+
+}
+
+/* =========================================
+   CONFERENCE BOX - TEXT LEFT / IMAGE RIGHT
+   ========================================= */
+
+.box.conference-box {
+    display: grid !important;
+
+    /* Left text column + right image column */
+    grid-template-columns: minmax(0, 1fr) 300px !important;
+
+    column-gap: 3rem;
+    align-items: start;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   FORCE ALL TEXT INTO LEFT COLUMN
+   ========================================= */
+
+.box.conference-box > *:not(.conference-image) {
+    grid-column: 1 !important;
+}
+
+
+/* =========================================
+   IMAGE ONLY IN RIGHT COLUMN
+   ========================================= */
+
+.box.conference-box > .conference-image {
+    grid-column: 2 !important;
+
+    /* Make image occupy the right side
+       without allowing other elements there */
+    grid-row: 1 / span 50;
+
+    width: 100%;
+    max-width: 300px;
+
+    justify-self: end;
+    align-self: start;
+
+    margin: 0;
+}
+
+
+/* Image itself */
+
+.box.conference-box > .conference-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 0.3rem;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media screen and (max-width: 980px) {
+
+    .box.conference-box {
+        grid-template-columns: minmax(0, 1fr) 230px !important;
+        column-gap: 2rem;
+    }
+
+    .box.conference-box > .conference-image {
+        max-width: 230px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media screen and (max-width: 736px) {
+
+    .box.conference-box {
+        grid-template-columns: 1fr !important;
+        row-gap: 2rem;
+    }
+
+
+    /* Everything becomes one column */
+
+    .box.conference-box > *:not(.conference-image) {
+        grid-column: 1 !important;
+    }
+
+
+    /* Image moves underneath */
+
+    .box.conference-box > .conference-image {
+        grid-column: 1 !important;
+        grid-row: auto;
+
+        width: 100%;
+        max-width: 400px;
+
+        justify-self: center;
+
+        margin-top: 1rem;
+    }
+
+}
